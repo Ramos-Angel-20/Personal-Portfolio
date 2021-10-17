@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700;900&display=swap');
+
+:root {
+    
+    --primary-font: 'Fira Sans', sans-serif; //weights 400, 600, 700, 900
+    
+    
+    --background-color: #f2ebfc; 
+    --container-background: #fff;
+    --theme-button-background: #5117ff;
+
+
+    --font-color: #000;
+    --titles-font-color: #85828c;
+    --menu-button-font-color: black;
+    --theme-button-color: #fff;   
+
+    --navbar-height: 5.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    color: var(--font-color);
+    height: 300rem;
+}
+
+body.dark {
+    --background-color: #252525; 
+    --container-background: #393939;
+    --theme-button-background: orange;
+
+    --font-color: #fff;
+    --menu-button-font-color: #fff;
+    --titles-font-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+//TODO: Implementar.
+.gradient-text {
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

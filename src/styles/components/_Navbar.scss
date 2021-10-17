@@ -1,0 +1,85 @@
+.navbar {
+    
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-height: var(--navbar-height);
+    
+    &__content {
+        color: var(--titles-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & span {
+            font-size: 3rem;
+            flex: 1;
+        }
+
+        &__icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            &__icons {
+                gap: 0;
+            }
+        }
+
+        // Menu icon
+        &__icon {
+            color: var(--menu-button-font-color);
+            font-size: 2.9rem;
+            background-color: var(--container-background);
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: .5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        // Lista de links para pantallas grandes
+        &__links-list {
+            list-style: none;
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2rem;
+            margin: 0 1rem;
+
+
+            & li {  
+                border-radius: 2rem;
+                font-weight: 600;
+                padding: .5rem 1rem;
+                background-color: #0094ff;
+                color: white;
+            } 
+        }
+    }
+}
+
+.theme__toggle {
+    background-color: var(--theme-button-background);
+    font-size: 2.5rem;
+    color: var(--theme-button-color);
+}
+
+// Ocultamos el icono de menu en pantallas grandes.
+@media screen and (min-width: 768px) {
+    .menu__button {
+        display: none;
+    }
+
+    .navbar__content__links-list {
+        display: flex;
+    }
+}
+
+
+
