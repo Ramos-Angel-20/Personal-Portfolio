@@ -50,8 +50,17 @@ body.dark {
     --menu-button-border-color: #fff;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.dev-img {
+    margin-top: 2rem;
 }

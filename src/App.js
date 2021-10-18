@@ -1,7 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
 
-import Header from './components/Header';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
+import About from './components/About';
+
+import devSvg from './assets/dev.svg';
 
 //token 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
 
@@ -11,26 +14,49 @@ const App = () => {
   const mainRef = useRef(null);
 
 
-  const options = {
-    rootMargin: "-170px 0px 0px 0px"
-  };
+  // const options = {
+  //   rootMargin: "-170px 0px 0px 0px"
+  // };
 
-  const mainCallback = entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+  // const mainElementCallback = entries => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       setNavbarClasses('');
+        
+  //     }
+
+  //     if (!entry.isIntersecting) {
+  //       setNavbarClasses('scrolled');
+        
+  //     }
+  //   });
+  // }
+
+  // useEffect(() => {
+  //   console.log(mainRef.current)
+  //   const mainObserver = new IntersectionObserver(mainElementCallback, options);
+  //   mainObserver.observe(mainRef.current);
+  // }, [mainRef, options]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { y } = mainRef.current.getBoundingClientRect();
+      
+      if (y <= 50) {
+        setNavbarClasses('scrolled');
+      }
+      else {
         setNavbarClasses('');
       }
 
-      if (!entry.isIntersecting) {
-        setNavbarClasses('scrolled');
-      }
-    });
-  }
+    }
 
-  useEffect(() => {
-    const mainObserver = new IntersectionObserver(mainCallback, options);
-    mainObserver.observe(mainRef.current);
-  }, [mainRef, options]);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
 
 
 
@@ -39,6 +65,7 @@ const App = () => {
       <Navbar classes={navbarClasses} />
       <main ref={mainRef}>
         <Header />
+        <About />
       </main>
     </>
   );
