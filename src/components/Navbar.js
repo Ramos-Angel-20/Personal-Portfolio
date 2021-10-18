@@ -1,25 +1,25 @@
-import { BiMenu, BiSun } from 'react-icons/bi';
+import { BiMenu, BiSun, BiMoon } from 'react-icons/bi';
 import { HiCode } from 'react-icons/hi';
 
-import { useEffect, useState } from 'react';
+import { useState, useContext } from 'react';
 
 import MobileMenu from './MobileMenu';
 import Backdrop from './Backdrop';
+import ThemeContext from '../context/ThemeContext';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    useEffect(() => {
-        document.body.classList.add('dark');
-    }, []);
+    const themeCtx = useContext(ThemeContext);
 
     const openMenuMobileHandler = () => {
         setMobileMenuOpen(prevState => !prevState);
     }
 
     return (
-        <div className='navbar'>
+        <div className={`navbar ${props.classes}`}>
 
                 <div className='navbar__content container'>
 
@@ -34,17 +34,18 @@ const Navbar = () => {
                             <li>Contacto</li>
                         </ul>
 
-                        <div className="navbar__content__icon theme__toggle">
-                            <BiSun />
+                        <div className="navbar__content__icon theme-toggle" onClick={() => themeCtx.themeChangeHandler()}>
+                            {themeCtx.theme === 'dark' ? <BiSun /> : <BiMoon/>}
                         </div>
 
-                        <div className="navbar__content__icon menu__button" onClick={openMenuMobileHandler}>
+                        <div className="navbar__content__icon menu-button" onClick={openMenuMobileHandler}>
                             <BiMenu />
                         </div>
 
                     </div>
 
-                    {mobileMenuOpen && <Backdrop onClose={openMenuMobileHandler}><MobileMenu opened={mobileMenuOpen}/></Backdrop> }
+                    {mobileMenuOpen && <Backdrop onClose={openMenuMobileHandler}></Backdrop> }
+                    <MobileMenu opened={mobileMenuOpen}/>
                 </div>
             </div>
     );

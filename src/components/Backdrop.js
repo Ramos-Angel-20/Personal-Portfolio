@@ -5,14 +5,14 @@ import { createPortal } from 'react-dom';
 const BackdropOverlay = props => {
     return (
         <div className='backdrop' onClick={props.onClose}>
-            {props.children}
+            
         </div>
     );
 }
 
 
 const Backdrop = props => {
-    return createPortal(<BackdropOverlay onClose={props.onClose}>{props.children}</BackdropOverlay>, document.getElementById('backdrop-root'));
+    return createPortal(<BackdropOverlay onClose={props.onClose}></BackdropOverlay>, document.getElementById('backdrop-root'));
 } 
 
 
