@@ -50,6 +50,10 @@ body.dark {
     --menu-button-border-color: #fff;
 }
 
+main {
+    margin-top: calc(var(--navbar-height) + 2rem);
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -59,8 +63,4 @@ img {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.dev-img {
-    margin-top: 2rem;
 }

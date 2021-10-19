@@ -1,9 +1,11 @@
 .header {
-    margin-top: calc(var(--navbar-height) + 2rem);
+    
     background-color: var(--container-background);
     border-radius: 1rem;
     height: auto;
     padding: 1rem;
+
+    
     
 
     & h1 {
@@ -27,5 +29,16 @@
         & p {
             text-align: left;
         }
+    }
+}
+
+.dev-img {
+    margin-top: 3rem;
+    // width: 70rem;
+}
+
+@media screen and (min-width: 768px) {
+    .dev-img {
+        max-width: 70rem;
     }
 }

@@ -4,8 +4,6 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
 
-import devSvg from './assets/dev.svg';
-
 //token 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
 
 const App = () => {

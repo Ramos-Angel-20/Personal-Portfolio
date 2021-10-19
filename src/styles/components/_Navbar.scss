@@ -41,6 +41,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            user-select: none;
             cursor: pointer;
         }
 
@@ -62,6 +63,7 @@
                 
                 // background-color: #0094ff;
                 color: rgb(161, 161, 161);
+                cursor: pointer;
             } 
         }
     }
@@ -93,5 +95,22 @@
     }
 }
 
+.toggled {
+    animation: pop-up 200ms forwards;
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 
