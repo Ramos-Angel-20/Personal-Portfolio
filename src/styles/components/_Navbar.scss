@@ -26,7 +26,7 @@
 
         @media screen and (min-width: 768px) {
             &__icons {
-                gap: 0;
+                gap: .5rem;
             }
         }
 
@@ -43,6 +43,7 @@
             align-items: center;
             user-select: none;
             cursor: pointer;
+            overflow: hidden;
         }
 
 
@@ -81,7 +82,12 @@
 }
 
 .menu-button {
-    border: 1px solid var(--menu-button-border-color);
+    border: 1px solid var(--font-color);
+}
+
+.lang-toggle {
+    font-size: 2rem;
+    border: 1px solid var(--font-color);
 }
 
 // Ocultamos el icono de menu en pantallas grandes.
