@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700;900&display=swap');
 
+
 :root {
     
     --primary-font: 'Fira Sans', sans-serif; //weights 400, 600, 700, 900
@@ -49,11 +50,4 @@ body.dark {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-//TODO: Implementar.
-.gradient-text {
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
