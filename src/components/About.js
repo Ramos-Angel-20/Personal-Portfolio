@@ -20,7 +20,7 @@ const About = () => {
                     mis practicas profesionales en alguna empresa que este desarrollando un producto o servicio
                     de software. <br/>
                     Mi inteción es formarme como programador web ya que todo ese mundo me parece apasionante, desde
-                    el frontend hasta el backend, por tal motivo pongo ofrezco mi tiempo y mis habilidades para el 
+                    el frontend hasta el backend, por tal motivo ofrezco mi tiempo y mis habilidades para el 
                     desarrollo de software.
                 </p>
             </div>
