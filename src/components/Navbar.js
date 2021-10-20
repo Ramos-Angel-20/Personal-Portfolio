@@ -6,15 +6,17 @@ import { useState, useContext, useRef } from 'react';
 import MobileMenu from './MobileMenu';
 import Backdrop from './Backdrop';
 import ThemeContext from '../context/ThemeContext';
+import mexicoFlag from '../assets/mexico.svg';
+import usaFlag from '../assets/usa.svg';
 
 //TODO: Agregar animación pop-up al botón theme.
 
 const Navbar = (props) => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    
+
     const themeCtx = useContext(ThemeContext);
-    
+
     const menuButtonRef = useRef(null);
     const themeButtonRef = useRef(null);
 
@@ -25,16 +27,17 @@ const Navbar = (props) => {
         setMobileMenuOpen(prevState => !prevState);
     }
 
-    /*
-        recibimos como parametro un ref y una función callback,
-        este ref nos sirve para agregar la animación al botón
-        menú o theme a traves de una clase de css, misma que 
-        sera removida con la ayuda de un setTimeout con el 
-        mismo tiempo que la duración de la animación, de esta 
-        forma en lo que termina la animación se retira del ref 
-        la clase que la activa. 
-    */
     const toggleAnimationHandler = (ref, callback) => {
+
+        /*
+            recibimos como parámetro un ref y una función callback,
+            este ref nos sirve para agregar la animación al botón
+            menú o theme a traves de una clase de css, misma que 
+            sera removida con la ayuda de un setTimeout con el 
+            mismo tiempo que la duración de la animación, de esta 
+            forma en lo que termina la animación se retira del ref 
+            la clase que la activa. 
+        */
 
         ref.current.classList.add('toggled');
         callback();
@@ -50,41 +53,46 @@ const Navbar = (props) => {
     return (
         <div className={`navbar ${props.classes}`}>
 
-                <div className='navbar__content container'>
+            <div className='navbar__content container'>
 
-                    <span><HiCode /></span>
+                <span><HiCode /></span>
 
-                    <div className="navbar__content__icons">
+                <div className="navbar__content__icons">
 
-                        <ul className="navbar__content__links-list">
-                            <li>Sobre mi</li>
-                            <li>Habilidades</li>
-                            <li>Proyectos</li>
-                            <li>Contacto</li>
-                        </ul>
+                    <ul className="navbar__content__links-list">
+                        <li>Sobre mi</li>
+                        <li>Habilidades</li>
+                        <li>Proyectos</li>
+                        <li>Contacto</li>
+                    </ul>
 
-                        <div 
-                            className="navbar__content__icon theme-toggle"  
-                            ref={themeButtonRef} 
-                            onClick={() => toggleAnimationHandler(themeButtonRef,themeCtx.themeChangeHandler)}
-                        >
-                            {themeCtx.theme === 'dark' ? <BiSun /> : <BiMoon />}
-                        </div>
-
-                        <div 
-                            className="navbar__content__icon menu-button" 
-                            ref={menuButtonRef} 
-                            onClick={()=> toggleAnimationHandler(menuButtonRef, openMenuMobileHandler)}
-                        >
-                            <BiMenu />
-                        </div>
-
+                    <div className="navbar__content__icon lang-toggle">
+                        <p>Es</p>
                     </div>
 
-                    {mobileMenuOpen && <Backdrop onClose={openMenuMobileHandler}></Backdrop> }
-                    <MobileMenu opened={mobileMenuOpen}/>
+                    <div
+                        className="navbar__content__icon theme-toggle"
+                        ref={themeButtonRef}
+                        onClick={() => toggleAnimationHandler(themeButtonRef, themeCtx.themeChangeHandler)}
+                    >
+                        {themeCtx.theme === 'dark' ? <BiSun /> : <BiMoon />}
+                    </div>
+
+
+                    <div
+                        className="navbar__content__icon menu-button"
+                        ref={menuButtonRef}
+                        onClick={() => toggleAnimationHandler(menuButtonRef, openMenuMobileHandler)}
+                    >
+                        <BiMenu />
+                    </div>
+
                 </div>
+
+                {mobileMenuOpen && <Backdrop onClose={openMenuMobileHandler}></Backdrop>}
+                <MobileMenu opened={mobileMenuOpen} />
             </div>
+        </div>
     );
 }
 

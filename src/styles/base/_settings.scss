@@ -10,7 +10,7 @@
     --container-background: #fff;
     --theme-button-background: #5117ff;
 
-    --menu-button-border-color: #000;
+    // --menu-button-border-color: #000;
 
     --font-color: #000;
     --titles-font-color: #85828c;
@@ -48,11 +48,12 @@ body.dark {
     --menu-button-font-color: #fff;
     --titles-font-color: #fff;
 
-    --menu-button-border-color: #fff;
+    // --menu-button-border-color: #fff;
 }
 
 main {
     margin-top: calc(var(--navbar-height) + 2rem);
+    min-height: 100vh;
 }
 
 img {

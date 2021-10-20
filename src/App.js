@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
+import Footer from './components/Footer';
 
 //token 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
 
@@ -20,12 +21,12 @@ const App = () => {
   //   entries.forEach(entry => {
   //     if (entry.isIntersecting) {
   //       setNavbarClasses('');
-        
+
   //     }
 
   //     if (!entry.isIntersecting) {
   //       setNavbarClasses('scrolled');
-        
+
   //     }
   //   });
   // }
@@ -39,7 +40,7 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       const { y } = mainRef.current.getBoundingClientRect();
-      
+
       if (y <= 50) {
         setNavbarClasses('scrolled');
       }
@@ -65,6 +66,7 @@ const App = () => {
         <Header />
         <About />
       </main>
+      <Footer />
     </>
   );
 }
