@@ -10,6 +10,7 @@
     --container-background: #fff;
     --theme-button-background: #5117ff;
 
+    --menu-button-border-color: #000;
 
     --font-color: #000;
     --titles-font-color: #85828c;
@@ -33,7 +34,9 @@ body {
     background-color: var(--background-color);
     font-family: var(--primary-font);
     color: var(--font-color);
-    height: 300rem;
+    min-height: 100vh;
+
+    transition: all 200ms ease;
 }
 
 body.dark {
@@ -44,6 +47,17 @@ body.dark {
     --font-color: #fff;
     --menu-button-font-color: #fff;
     --titles-font-color: #fff;
+
+    --menu-button-border-color: #fff;
+}
+
+main {
+    margin-top: calc(var(--navbar-height) + 2rem);
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 .container {
