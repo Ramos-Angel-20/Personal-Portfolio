@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
+import Skills from './components/Skills';
 import Footer from './components/Footer';
 
 //token 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
@@ -65,6 +66,7 @@ const App = () => {
       <main ref={mainRef}>
         <Header />
         <About />
+        <Skills />
       </main>
       <Footer />
     </>
