@@ -14,30 +14,6 @@ const App = () => {
   const mainRef = useRef(null);
 
 
-  // const options = {
-  //   rootMargin: "-170px 0px 0px 0px"
-  // };
-
-  // const mainElementCallback = entries => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       setNavbarClasses('');
-
-  //     }
-
-  //     if (!entry.isIntersecting) {
-  //       setNavbarClasses('scrolled');
-
-  //     }
-  //   });
-  // }
-
-  // useEffect(() => {
-  //   console.log(mainRef.current)
-  //   const mainObserver = new IntersectionObserver(mainElementCallback, options);
-  //   mainObserver.observe(mainRef.current);
-  // }, [mainRef, options]);
-
   useEffect(() => {
     const handleScroll = () => {
       const { y } = mainRef.current.getBoundingClientRect();

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaFileDownload } from 'react-icons/fa';
 
 import devSvg from '../assets/dev.svg';
@@ -10,10 +11,6 @@ const About = () => {
             <div className='about__img'>
                 <img src={devSvg} alt='Sobre Mi'></img>
             </div>
-
-            {/* <div className='about__action'>
-                <button className='about__action--cv-button'>Descarga mi CV</button>
-            </div> */}
 
             <div className='about__subgrid'>
                 <div className='about__content'>
@@ -32,7 +29,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className='about__action'>
-                    <button className='about__action--cv-button'>Descarga mi CV <span><FaFileDownload /></span> </button>
+                    <Link className='about__action--cv-button' to='/CV-Es.pdf' download target='_blank'>Descarga mi CV <span><FaFileDownload /></span> </Link>
                 </div>
             </div>
         </div>

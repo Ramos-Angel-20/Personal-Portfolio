@@ -1,3 +1,5 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
@@ -7,9 +9,11 @@ import ThemeProvider from './context/ThemeProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
