@@ -4,7 +4,7 @@ import { FaServer, FaDatabase } from 'react-icons/fa';
 const Skills = () => {
     return (
         <div className='skills container'>
-            <h1>Habilidades</h1>
+            <h2 className='skills__title'>Habilidades</h2>
 
             <div className='skills__card-container'>
                 <div className='skills__card-container__card'>
@@ -14,7 +14,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Programación FrontEnd</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nam hic magni eligendi voluptates ducimus provident impedit eius iure quaerat ipsam cumque, inventore corrupti porro rerum iste possimus atque dolor!</p>
+                    <p>En el lado del Frontend tengo conocimientos en las tecnologías fundamentales como Html, Css y Sass con la metodología BEM, Javascript y un poco de Typescript (Types, interfaces, etc), además manejo librerías como React para la creación de interfaces de usuario o Axios para realizar llamadas a APIs.</p>    
                 </div>
 
 
@@ -25,7 +25,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Programación BackEnd</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ut vero, at commodi maiores perspiciatis magnam quasi qui magni nostrum aspernatur voluptatum placeat dolorem perferendis inventore dolores, minus quod ipsam.</p>
+                    <p>En Backend he realizado un par de APIs REST con Node.js y el framework Express usando el patrón modelo vista controlador (MVC) para los cuates, implementando un sistema de autenticación basado en Json Web Tokens (JWT) y con consultas a base de datos mediante el ORM sequelize. <br/>Además estoy tomando un curso de Python con el framework Django.</p>
                 </div>
 
 
