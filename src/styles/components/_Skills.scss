@@ -10,14 +10,15 @@
     &__card-container {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
 
         &__card {
             background-color: var(--container-background);
             height: auto;
             border-radius: 1rem;
-            width: 25rem;
+            width: 30rem;
             margin: 0 auto;
+            padding: 1rem;
 
             &__image-field {
                 background-color: #5117ff;
@@ -33,6 +34,28 @@
                     font-size: 5rem;
                     color: #fff;
                 }
+            }
+        }
+
+        & h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        & p {
+            font-size: 1.5rem;
+            text-align: justify;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            &__card {
+                width: unset;
             }
         }
     }

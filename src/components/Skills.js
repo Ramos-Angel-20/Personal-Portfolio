@@ -14,6 +14,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Programación FrontEnd</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nam hic magni eligendi voluptates ducimus provident impedit eius iure quaerat ipsam cumque, inventore corrupti porro rerum iste possimus atque dolor!</p>
                 </div>
 
 
@@ -24,6 +25,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Programación BackEnd</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ut vero, at commodi maiores perspiciatis magnam quasi qui magni nostrum aspernatur voluptatum placeat dolorem perferendis inventore dolores, minus quod ipsam.</p>
                 </div>
 
 
@@ -34,6 +36,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Diseño y normalización de bases de datos</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In maxime unde facilis, quo voluptate ducimus possimus delectus aliquid commodi distinctio, repudiandae fuga doloremque error aut aperiam eligendi fugiat voluptatum blanditiis.</p>
                 </div>
 
             </div>
