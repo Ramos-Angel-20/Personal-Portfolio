@@ -6,8 +6,6 @@ import { useState, useContext, useRef } from 'react';
 import MobileMenu from './MobileMenu';
 import Backdrop from './Backdrop';
 import ThemeContext from '../context/ThemeContext';
-import mexicoFlag from '../assets/mexico.svg';
-import usaFlag from '../assets/usa.svg';
 
 //TODO: Agregar animación pop-up al botón theme.
 
