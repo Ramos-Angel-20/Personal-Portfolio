@@ -6,6 +6,7 @@ import { useState, useContext, useRef } from 'react';
 import MobileMenu from './MobileMenu';
 import Backdrop from './Backdrop';
 import ThemeContext from '../context/ThemeContext';
+import toggleAnimationHandler from '../helpers/AnimationHandler';
 
 //TODO: Agregar animación pop-up al botón theme.
 
@@ -18,7 +19,9 @@ const Navbar = (props) => {
     const menuButtonRef = useRef(null);
     const themeButtonRef = useRef(null);
 
-
+    const sectionScrollHandler = sectionRef => {
+        sectionRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }
 
 
     const openMenuMobileHandler = () => {
@@ -58,8 +61,8 @@ const Navbar = (props) => {
                 <div className="navbar__content__icons">
 
                     <ul className="navbar__content__links-list">
-                        <li>Sobre mi</li>
-                        <li>Habilidades</li>
+                        <li onClick={() => sectionScrollHandler(props.aboutRef)} >Sobre mi</li>
+                        <li onClick={() => sectionScrollHandler(props.skillsRef)} >Habilidades</li>
                         <li>Proyectos</li>
                         <li>Contacto</li>
                     </ul>
@@ -88,7 +91,7 @@ const Navbar = (props) => {
                 </div>
 
                 {mobileMenuOpen && <Backdrop onClose={openMenuMobileHandler}></Backdrop>}
-                <MobileMenu opened={mobileMenuOpen} />
+                <MobileMenu opened={mobileMenuOpen} onScroll={sectionScrollHandler} aboutRef={props.aboutRef} skillsRef={props.skillsRef}/>
             </div>
         </div>
     );

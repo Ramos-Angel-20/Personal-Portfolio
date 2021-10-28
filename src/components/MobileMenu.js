@@ -2,8 +2,8 @@ import { createPortal } from 'react-dom';
 
 import { FaTimes } from 'react-icons/fa';
 
-const MobileMenuOverlay = ({ opened }) => {
-    const openedClasses = opened ? '' : 'closed-menu';
+const MobileMenuOverlay = (props) => {
+    const openedClasses = props.opened ? '' : 'closed-menu';
 
 
     return (
@@ -12,8 +12,8 @@ const MobileMenuOverlay = ({ opened }) => {
                 <FaTimes/>
             </div> */}
             <ul>
-                <li>Sobre mi</li>
-                <li>Habilidades</li>
+                <li onClick={() => props.onScroll(props.aboutRef)}>Sobre mi</li>
+                <li onClick={() => props.onScroll(props.skillsRef)}>Habilidades</li>
                 <li>Proyectos</li>
                 <li>Contacto</li>
             </ul>
@@ -21,6 +21,13 @@ const MobileMenuOverlay = ({ opened }) => {
     );
 }
 
-const MobileMenu = ({ opened }) => createPortal(<MobileMenuOverlay opened={opened}/>, document.getElementById('overlays-root'));
+const MobileMenu = (props) => createPortal(
+    <MobileMenuOverlay 
+        opened={props.opened} 
+        aboutRef={props.aboutRef} 
+        skillsRef={props.skillsRef} 
+        onScroll={props.onScroll}
+    />, document.getElementById('overlays-root')
+);
 
 export default MobileMenu;

@@ -11,9 +11,13 @@ import Footer from './components/Footer';
 const App = () => {
 
   const [navbarClasses, setNavbarClasses] = useState('');
+  
+  
   const mainRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
 
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const { y } = mainRef.current.getBoundingClientRect();
@@ -35,14 +39,20 @@ const App = () => {
   }, []);
 
 
-
   return (
     <>
-      <Navbar classes={navbarClasses} />
+      <Navbar classes={navbarClasses} aboutRef={aboutRef} skillsRef={skillsRef} />
       <main ref={mainRef}>
         <Header />
-        <About />
-        <Skills />
+        
+        <div ref={aboutRef}>
+          <About />
+        </div>
+        
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
+
       </main>
       <Footer />
     </>

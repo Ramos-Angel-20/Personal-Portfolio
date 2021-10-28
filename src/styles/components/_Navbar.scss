@@ -7,6 +7,7 @@
     left: 0;
     max-height: var(--navbar-height);
     transition: all 200ms;
+    z-index: 9;
     
     &__content {
         color: var(--titles-color);

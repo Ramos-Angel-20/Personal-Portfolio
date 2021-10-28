@@ -25,7 +25,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Programación BackEnd</h2>
-                    <p>En Backend he realizado un par de APIs REST con Node.js y el framework Express usando el patrón modelo vista controlador (MVC) para los cuates, implementando un sistema de autenticación basado en Json Web Tokens (JWT) y con consultas a base de datos mediante el ORM sequelize. <br/>Además estoy tomando un curso de Python con el framework Django.</p>
+                    <p>En Backend he realizado un par de APIs REST con Node.js y el framework Express usando el patrón modelo vista controlador, (MVC) para los cuates, implementando un sistema de autenticación basado en Json Web Tokens (JWT) y con consultas a base de datos tipo SQL mediante el ORM sequelize. <br/>Además estoy tomando un curso de Python con el framework Django.</p>
                 </div>
 
 
@@ -36,7 +36,7 @@ const Skills = () => {
                     </div>
 
                     <h2>Diseño y normalización de bases de datos</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In maxime unde facilis, quo voluptate ducimus possimus delectus aliquid commodi distinctio, repudiandae fuga doloremque error aut aperiam eligendi fugiat voluptatum blanditiis.</p>
+                    <p>A lo largo del tiempo que llevo estudiando en el Instituto Tecnologico de Tijuana he desarrollado varios proyectos de bases de datos en los cuales he aplicado normalización asi como consultas complejas (Joins, Vistas, Procedimientos almacenados, etc).</p>
                 </div>
 
             </div>
